@@ -1,0 +1,26 @@
+body{
+    background-color: whitesmoke;
+    width: 30%;
+    margin: auto;
+}
+
+.header{
+    margin-top: 100px;
+    margin-bottom:50px;
+    text-align: justify;
+}
+
+ul{
+    width: 300%;
+    background-color: red;
+    margin:0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+ul .message{
+    list-style-type: none;
+    width: 100%;
+    border: 1px solid red;
+    padding: 0;
+    
+}

@@ -1,0 +1,39 @@
+{% extends 'temp_stories/base.html' %}
+
+{% block content %}
+
+   
+    <h1 class="header"> Temperature Converter </h1>
+     {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li class="message"> {{message}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action="" method="post">
+        
+        {% csrf_token %}
+        From: <select name="temp_from">
+            <option value="Fahr" name = "Fahr">Fahrenheit</option>
+            <option value="cels" name = "cels"> Celsius</option>
+            </select>
+
+        To: <select name="temp_to">
+            <option value="Fahr" name = "Fahr">Fahrenheit</option>
+            <option value="cels" name = "cels"> Celsius</option>
+            </select>
+
+        <p>Enter the temperature to convert:</p>
+        <input type="number" name="temp">
+        <input type="submit" value="Convert">
+    </form>
+
+    {% if converted_t %}
+    <p>Your converted temperature of {{ temp }} in {{p1}} is {{ converted_t }} in {{p2}}</p>
+    {% else %}
+    <p> Convert from Fahrenheit to Celsius </p>
+    {% endif %}
+
+    <a href="{% url 'index' %}"> Click to read my story</a>
+{% endblock %}

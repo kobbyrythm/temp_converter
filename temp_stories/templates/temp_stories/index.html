@@ -1,0 +1,9 @@
+{% extends 'temp_stories/base.html' %}
+        
+        {% block content %}
+            <h1 class="header">Temperature Story Generator</h1>
+            <p>{{ story }}</p>
+
+            <a href="{% url 'temp' %}"> click to convert temperature readings</a> 
+            
+        {% endblock %}
